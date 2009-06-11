@@ -1,0 +1,35 @@
+fact_recursive = function (a)
+{
+	if (a == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return a * fact_recursive (a - 1);
+	}
+}
+
+# This is a comment. WILL IT BLEND?
+fact_iterative = function (a)
+{
+	if (a == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		i = 1;
+		rt = 1;
+		while (i <= a)
+		{
+			rt = rt * i;
+			i = i + 1;
+		}
+		return rt;
+	}
+}
+
+val = 1;
+print("Iterative result: ", fact_iterative(val), "\n");
+print("Recursive result: ", fact_recursive(val), "\n");
